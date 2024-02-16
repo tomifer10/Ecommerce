@@ -1,0 +1,21 @@
+.log-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#firstlog {
+  width: 15rem;
+  height: 2.5rem;
+  background-color: var(--gold--primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#firstlog:hover {
+  background-color: var(--gold--secondary);
+}
