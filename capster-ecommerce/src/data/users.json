@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Victor Sanguineta",
+    "password": "sanguineta",
+    "email": "sanguineta@gmail.com",
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 2,
+    "name": "Pablo Fernandez",
+    "password": "pablito",
+    "email": "pablito@gmail.com",
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 3,
+    "name": "Lulu Stranululu",
+    "password": "stranululu",
+    "email": "lulu@gmail.com",
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 4,
+    "name": "Laurita Mot",
+    "password": "laurita",
+    "email": "laurita@gmail.com",
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 5,
+    "name": "Tizi Fer",
+    "password": "tizi",
+    "email": "tizi@gmail.com",
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 6,
+    "name": "Dani Fer",
+    "password": "dani",
+    "email": "dani@gmail.com",
+    "cart": [],
+    "wishlist": []
+  }
+]

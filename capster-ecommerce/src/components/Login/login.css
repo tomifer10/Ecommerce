@@ -1,7 +1,7 @@
 .log-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 0.3rem;
 }
 
 #firstlog {
@@ -18,4 +18,12 @@
 
 #firstlog:hover {
   background-color: var(--gold--secondary);
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
 }
