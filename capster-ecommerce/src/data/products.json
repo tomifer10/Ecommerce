@@ -2,48 +2,44 @@
   {
     "id": "1",
     "Class": "Nba Cap",
-    "Highlight": true,
-    "Name": "Boston Celtics Cap",
+    "Name": "Boston Celtics",
     "Description": "Green cap with the boston celtics signature trefoil.",
     "Price": 25,
     "Size": "S, M, L, XL",
     "Material": "Polyester",
-    "Image": "capster-ecommerce/src/assets/Captura de Pantalla 2024-02-08 a la(s) 17.41.46.png"
+    "Image": "capster-ecommerce/src/assets/boston0.png"
   },
 
   {
     "id": "2",
-    "Class": "silla",
-    "Highlight": false,
-    "Name": "Silla Dalye Terciopelo",
-    "Description": "Nuestra Silla Dalye Terciopelo es elegancia, modernidad, comodidad y sofisticación. ¡Todo en uno! Se trata de una silla cuya estructura está fabricada en acero reforzado, con las patas lacadas en color negro. Su asiento está forrado con terciopelo.",
-    "Price": 425,
-    "Meassures": "Ancho 55 cm, Alto 51 cm, Fondo 54 cm",
-    "Material": "Terciopelo y metal",
-    "Image": "src/assets/products/silla-02-forniture.webp"
+    "Class": "Nba Cap",
+    "Name": "Chicago Bulls",
+    "Description": "Black cap with large chicago lettering in red.",
+    "Price": 25,
+    "Size": "S, M, L, XL",
+    "Material": "Polyester",
+    "Image": "capster-ecommerce/src/assets/bulls0.png"
   },
 
   {
     "id": "3",
-    "Class": "mesa",
-    "Highlight": true,
-    "Name": "Mesa Nium 3 cajones",
-    "Description": "La mesa Nium de madera es una elegante pieza de mobiliario que combina funcionalidad y estilo. Confeccionada artesanalmente con madera de roble de alta calidad, su superficie presenta una textura suave y acabado natural que resalta la belleza de la madera.",
-    "Price": 475,
-    "Meassures": "Ancho 43 cm, Alto 46 cm, Fondo 30 cm",
-    "Material": "Madera",
-    "Image": "src/assets/products/mesa-01-forniture.webp"
+    "Class": "Nba Cap",
+    "Name": "San Antonio Spurs",
+    "Description": "Light pink cap with classic spurs logo.",
+    "Price": 30,
+    "Size": "S, M, L, XL",
+    "Material": "Polyester",
+    "Image": "capster-ecommerce/src/assets/spurs0.png"
   },
 
   {
     "id": "4",
-    "Class": "mesa",
-    "Highlight": false,
-    "Name": "Mesa Lena 2 cajones",
-    "Description": "¿También sueñas con una gran oficina en casa? Podemos ayudarlo con muebles de oficina en el hogar como escritorios, sillas de oficina, unidades de pared, estantes y opciones de almacenamiento.",
-    "Price": 300,
-    "Meassures": "Ancho 100 cm, Alto 112 cm, Fondo 74 cm",
-    "Material": "Madera",
-    "Image": "src/assets/products/mesa-02-forniture.webp"
+    "Class": "Nba Cap",
+    "Name": "Orlando Magic",
+    "Description": "Burgundy cap with visor and large magic logo in grey color.",
+    "Price": 20,
+    "Size": "S, M, L, XL",
+    "Material": "Polyester",
+    "Image": "capster-ecommerce/src/assets/magic0.png"
   }
 ]
