@@ -6,9 +6,7 @@ type Props = {};
 export default function AppRoutes({}: Props) {
   return (
     <BrowserRouter>
-      <Routes>
-        <MainRoutes />
-      </Routes>
+      <MainRoutes />
     </BrowserRouter>
   );
 }

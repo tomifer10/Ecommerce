@@ -7,7 +7,7 @@
     "Price": 25,
     "Size": "S, M, L, XL",
     "Material": "Polyester",
-    "Image": "capster-ecommerce/src/assets/boston0.png"
+    "Image": "src/assets/boston0.webp"
   },
 
   {
@@ -18,7 +18,7 @@
     "Price": 25,
     "Size": "S, M, L, XL",
     "Material": "Polyester",
-    "Image": "capster-ecommerce/src/assets/bulls0.png"
+    "Image": "src/assets/bulls0.webp"
   },
 
   {
@@ -29,7 +29,7 @@
     "Price": 30,
     "Size": "S, M, L, XL",
     "Material": "Polyester",
-    "Image": "capster-ecommerce/src/assets/spurs0.png"
+    "Image": "src/assets/spurs0.webp"
   },
 
   {
@@ -40,6 +40,6 @@
     "Price": 20,
     "Size": "S, M, L, XL",
     "Material": "Polyester",
-    "Image": "capster-ecommerce/src/assets/magic0.png"
+    "Image": "src/assets/magic0.webp"
   }
 ]

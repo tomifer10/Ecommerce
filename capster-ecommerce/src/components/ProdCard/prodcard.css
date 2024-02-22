@@ -1,0 +1,19 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  color: white;
+}
+
+.product-image img {
+  margin-top: 20rem;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+h2 {
+  color: white;
+}

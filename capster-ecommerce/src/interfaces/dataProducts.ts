@@ -5,5 +5,5 @@ export interface dataProducts {
   Description: string;
   Price: number;
   Material: string;
-  image: string;
+  Image: string;
 }

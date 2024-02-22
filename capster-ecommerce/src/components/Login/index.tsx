@@ -10,7 +10,7 @@ const Login = (_props: Props) => {
 
   const getUserData = async () => {
     try {
-      const request = await fetch("capster-ecommerce/src/data/users.json");
+      const request = await fetch("src/data/users.json");
       const JSONrequest = await request.json();
 
       return JSONrequest;
