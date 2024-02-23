@@ -3,17 +3,30 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .product-image img {
-  margin-top: 20rem;
   width: 10rem;
   height: 10rem;
   object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
-h2 {
-  color: white;
+.product-image:hover img {
+  opacity: 0.7;
+}
+
+.product-card h5 {
+  margin-top: 0.5rem;
+}
+
+.product-card p {
+  margin-bottom: 0.5rem;
 }

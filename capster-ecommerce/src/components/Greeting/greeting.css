@@ -1,0 +1,36 @@
+.greeting-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.greeting-container {
+  text-align: center;
+}
+
+.welcome {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.greet-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.start-shopping-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--gold--primary);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4rem;
+}
+
+.start-shopping-btn:hover {
+  background-color: var(--gold--secondary);
+}

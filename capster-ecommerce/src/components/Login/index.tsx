@@ -45,7 +45,7 @@ const Login = (_props: Props) => {
     if (userSuccesfullyFound) {
       setUser(user);
       //Aqui va el navigate a la pagina de productos
-      callNavigate("/catalog");
+      callNavigate("/greeting");
     } else {
       alert("Wrong Username or Password. Please try again");
     }
