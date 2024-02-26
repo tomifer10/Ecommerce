@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: var(--black--secondary);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

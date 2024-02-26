@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { MainRoutes } from "./MainRoutes";
 
 type Props = {};
