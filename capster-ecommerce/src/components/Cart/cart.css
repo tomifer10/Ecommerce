@@ -1,0 +1,73 @@
+.cap-cart {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  height: 50vh;
+  margin-top: 1rem;
+}
+
+.check-cap {
+  display: flex;
+  align-items: center;
+}
+
+.check-cap-image {
+  margin-right: 1.25rem;
+}
+
+.check-cap-image img {
+  width: 6rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.check-cap-info {
+  flex-grow: 1;
+}
+
+.check-cap-info h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.check-cap-info h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3125rem;
+}
+
+.check-cap-info p {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.check-btn {
+  background-color: var(--black--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.continue-btn {
+  background-color: var(--gold--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

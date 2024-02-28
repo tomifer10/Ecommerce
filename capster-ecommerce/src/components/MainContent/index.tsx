@@ -7,7 +7,7 @@ export default function MainContent({}: Props) {
   return (
     <div>
       <div className="welcome-title">
-        <h2>
+        <h2 className="welcome-comment">
           New cap. <br />
           New energy.
         </h2>
@@ -16,8 +16,8 @@ export default function MainContent({}: Props) {
       <div className="welcome-image">
         <img id="main-cap" src={maincap} alt="" />
       </div>
-      <div className="shop-text">
-        <h2> SHOP NOW!</h2>
+      <div>
+        <h2 className="shop-text"> SHOP NOW!</h2>
       </div>
     </div>
   );

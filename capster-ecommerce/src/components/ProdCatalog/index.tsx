@@ -12,7 +12,6 @@ export default function ProdCatalog({}: Props) {
       <h2>Basketball Caps</h2>
       <div className="products-container">
         {listOfProducts.array.map((product, index) => {
-          console.log(product);
           return (
             <Link
               style={{ textDecoration: "none", color: "white" }}

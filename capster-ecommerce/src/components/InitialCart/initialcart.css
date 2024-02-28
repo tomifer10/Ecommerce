@@ -1,0 +1,31 @@
+.initial-cart {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-empty {
+  text-align: center;
+  color: var(--black--secondary);
+}
+
+.tocatalog {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--gold--primary);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.tocatalog:hover {
+  background-color: var(--gold--secondary);
+}

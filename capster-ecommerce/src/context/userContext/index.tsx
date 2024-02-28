@@ -1,20 +1,23 @@
-import { createContext, useContext, useState } from "react";
-import { Outlet } from "react-router-dom";
+import {
+  FC,
+  PropsWithChildren,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 import { dataUsers } from "../../interfaces/dataUsers";
 
 export interface UserContextGreet {
-  array: dataUsers;
-  setArray: Function;
+  user: dataUsers;
+  setUser: Function;
 }
 
 const users = createContext({} as UserContextGreet);
 
-export const UserContextProvider = () => {
-  const [array, setArray] = useState({} as dataUsers);
+export const UserContextProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [user, setUser] = useState({} as dataUsers);
 
-  return (
-    <users.Provider value={{ array, setArray }}>{<Outlet />}</users.Provider>
-  );
+  return <users.Provider value={{ user, setUser }}>{children}</users.Provider>;
 };
 
 export const userGreetingContext = () => {

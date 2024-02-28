@@ -7,7 +7,12 @@
 }
 
 p {
+  color: white;
   margin-top: 1rem;
+}
+
+.welcome-comment {
+  color: white;
 }
 
 #main-cap {

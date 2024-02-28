@@ -5,8 +5,6 @@ type Props = {};
 
 export default function AppRoutes({}: Props) {
   return (
-    <BrowserRouter>
       <MainRoutes />
-    </BrowserRouter>
   );
 }

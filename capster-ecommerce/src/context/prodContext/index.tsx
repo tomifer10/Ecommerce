@@ -1,6 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import {
+  FC,
+  PropsWithChildren,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 import { dataProducts } from "../../interfaces/dataProducts";
-import { Outlet } from "react-router-dom";
 
 export interface ProductContextType {
   array: dataProducts[];
@@ -9,12 +14,12 @@ export interface ProductContextType {
 
 const products = createContext({} as ProductContextType);
 
-export const ProductContextProvider = () => {
+export const ProductContextProvider: FC<PropsWithChildren> = ({ children }) => {
   const [array, setArray] = useState([]);
 
   return (
     <products.Provider value={{ array, setArray }}>
-      {<Outlet />}
+      {children}
     </products.Provider>
   );
 };

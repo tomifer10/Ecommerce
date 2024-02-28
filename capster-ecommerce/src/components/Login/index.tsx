@@ -2,11 +2,17 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { dataUsers } from "../../interfaces/dataUsers";
+import { userGreetingContext } from "../../context/userContext";
+import { useAuthenticationDispatch } from "../../context/authContext"; // Importa el dispatch de autenticación
 
 type Props = {};
 
 const Login = (_props: Props) => {
   const [isLogginClicked, setLogginClicked] = useState(false);
+  const [JSONuser, setJSONuser] = useState<dataUsers[]>([]);
+  const callNavigate = useNavigate();
+  const userContext = userGreetingContext();
+  const authDispatch = useAuthenticationDispatch(); // Obtén el dispatch de autenticación
 
   const getUserData = async () => {
     try {
@@ -19,32 +25,38 @@ const Login = (_props: Props) => {
     }
   };
 
-  useEffect(() => {
-    const getUserDataResponse = async () => {
-      const userDataResponse = await getUserData();
+  const comparingUsers = async () => {
+    const userDataResponse = await getUserData();
+    if (userDataResponse) {
       setJSONuser(userDataResponse);
-    };
-    getUserDataResponse();
+    }
+  };
+
+  useEffect(() => {
+    comparingUsers();
   }, []);
 
-  const [user, setUser] = useState([]);
-  const [JSONuser, setJSONuser] = useState([] as dataUsers[]);
+  const loginInfoForm = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const userEmail = e.currentTarget.email.value;
+    const userPassword = e.currentTarget.password.value;
 
-  const callNavigate = useNavigate();
+    console.log("Email:", userEmail);
+    console.log("Password:", userPassword);
 
-  const loginInfoForm = (e: { preventDefault: () => void; target: any }) => {
-    const userInfo = e.target;
-    const userEmail = userInfo.email.value;
-    const userPassword = userInfo.password.value;
-
-    const userSuccesfullyFound = JSONuser.find(
+    const userSuccessfullyFound = JSONuser.find(
       (element) =>
         element.email === userEmail && element.password === userPassword
     );
 
-    if (userSuccesfullyFound) {
-      setUser(user);
-      //Aqui va el navigate a la pagina de productos
+    if (userSuccessfullyFound) {
+      userContext.setUser(userSuccessfullyFound);
+      console.log("User successfully found:", userSuccessfullyFound);
+
+      // Actualiza el estado de autenticación usando el dispatch
+      authDispatch({ type: "LOGIN" });
+
+      // Navega a la página de saludo
       callNavigate("/greeting");
     } else {
       alert("Wrong Username or Password. Please try again");
@@ -52,25 +64,18 @@ const Login = (_props: Props) => {
   };
 
   return (
-    //export default function Login({}: Props) {
-
     <div className="log-container">
       {isLogginClicked ? (
         <>
           <div>
             <form className="user-input" onSubmit={loginInfoForm}>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-              ></input>
+              <input type="email" name="email" placeholder="Email" required />
               <input
                 type="password"
                 name="password"
                 placeholder="Password"
                 required
-              ></input>
+              />
               <button type="submit" id="firstlog">
                 LOG IN
               </button>

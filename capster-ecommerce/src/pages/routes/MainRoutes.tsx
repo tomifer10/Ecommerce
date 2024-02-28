@@ -2,22 +2,27 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Home";
 import Catalog from "../Catalog";
 import GreetingPage from "../GreetingPage";
-import { ProductContextProvider } from "../../context/prodContext";
-import { UserContextProvider } from "../../context/userContext";
 import ProductInfo from "../ProductInfo";
+import ShoppingCart from "../ShoppingCart";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 
 export const MainRoutes = () => {
   return (
     <Routes>
-      <Route element={<UserContextProvider />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/greeting" element={<GreetingPage />} />
-        <Route element={<ProductContextProvider />}>
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/:productId" element={<ProductInfo />} />
-        </Route>
-      </Route>
+      <Route path="/" element={<Home />} />
+      <Route
+        path="/greeting"
+        element={<ProtectedRoute component={GreetingPage} />}
+      />
+      <Route path="/catalog" element={<ProtectedRoute component={Catalog} />} />
+      <Route
+        path="/:productId"
+        element={<ProtectedRoute component={ProductInfo} />}
+      />
+      <Route
+        path="/cart"
+        element={<ProtectedRoute component={ShoppingCart} />}
+      />
     </Routes>
   );
 };

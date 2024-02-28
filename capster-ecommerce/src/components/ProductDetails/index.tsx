@@ -1,13 +1,11 @@
 import "./productdetails.css";
 import { useProductContext } from "../../context/prodContext";
-import {
-  UserContextGreet,
-  userGreetingContext,
-} from "../../context/userContext";
+import { userGreetingContext } from "../../context/userContext";
 import { useParams } from "react-router-dom";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useState, useContext } from "react";
 
 export default function ProductDetails({}) {
+  const { user, setUser } = userGreetingContext();
   const { productId } = useParams();
   const productcontext = useProductContext();
   const [selectedSize, setSelectedSize] = useState("");
@@ -17,15 +15,15 @@ export default function ProductDetails({}) {
     (element) => element.id === productId
   );
 
-  const userContext = userGreetingContext().array;
   const addCapToArray = () => {
+    console.log(user);
+
     for (let i = 0; i < count; i++) {
-      if (renderProduct && userContext) {
-        userContext.cart.push(renderProduct);
+      if (user.cart && renderProduct && user) {
+        user.cart.push(renderProduct);
       }
-      console.log(userContext.cart);
-      console.log(count);
     }
+    console.log(user.cart);
   };
 
   const handleSizeChange = (event: {
