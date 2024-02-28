@@ -7,12 +7,16 @@ type Props = {};
 
 export default function Greeting({}: Props) {
   const callNavigate = useNavigate();
+  const userContext = userGreetingContext(); // Obtén el contexto de usuario
+
+  // Obtén el nombre del usuario del contexto
+  const userName = userContext.user ? userContext.user.name : "";
   return (
     <>
       <div className="greeting-page">
         <div className="greeting-container">
           <div className="welcome">
-            <h3>Welcome , we missed you!</h3>
+            <h3>Welcome {userName}, we missed you!</h3>
           </div>
           <div>
             <img src={greetimage} alt="" className="greet-image" />

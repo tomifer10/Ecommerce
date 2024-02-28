@@ -2,39 +2,36 @@ import "./cart.css";
 import { useState } from "react";
 import { dataProducts } from "../../interfaces/dataProducts";
 import { userGreetingContext } from "../../context/userContext";
-import { useNavigate } from "react-router-dom";
 
 type Props = {
   product: dataProducts | undefined;
   count: number;
-  price: Function;
+  calcTotal: Function;
 };
 
-export default function Cart({ product, count, price }: Props) {
+export default function Cart({ product, count, calcTotal }: Props) {
   const [counter, setCounter] = useState(count);
   const user = userGreetingContext().user;
-  const callNavigate = useNavigate();
 
   const addToCart = () => {
     setCounter((prevState) => prevState + 1);
     if (user && user.cart && product) user.cart.push(product);
     console.log(user.cart);
-    price();
+    calcTotal();
   };
 
-  const removeFromCart = () => {
+  const removeFromCart = (itemToRemove: dataProducts | undefined) => {
     setCounter((prevState) => prevState - 1);
-    if (user.cart && product) {
-      const index = user.cart.findIndex((element) => {
-        element.id === product.id;
-      });
-      user.cart.splice(index, 1);
+    if (user.cart && itemToRemove) {
+      // Utiliza filter para eliminar solo el elemento específico del carrito
+      user.cart = user.cart.filter((item) => item.id !== itemToRemove.id);
+      calcTotal();
     }
-    price();
   };
   const cartRemoval = () => {
+    // Elimina todos los elementos asociados al producto del carrito
     for (let i = 0; i < counter; i++) {
-      removeFromCart();
+      removeFromCart(product);
     }
   };
   return (
@@ -50,7 +47,10 @@ export default function Cart({ product, count, price }: Props) {
               <h4>${product?.Price}</h4>
               <p> Qty: {counter}</p>
               <span>
-                <button className="check-btn" onClick={removeFromCart}>
+                <button
+                  className="check-btn"
+                  onClick={() => removeFromCart(product)}
+                >
                   -
                 </button>
               </span>

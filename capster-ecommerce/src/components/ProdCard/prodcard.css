@@ -24,9 +24,12 @@
 }
 
 .product-card h5 {
-  margin-top: 0.5rem;
+  margin-top: 0rem;
+  color: var(--black--secondary);
 }
 
 .product-card p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
+  color: var(--black--secondary);
+  font-weight: 600;
 }

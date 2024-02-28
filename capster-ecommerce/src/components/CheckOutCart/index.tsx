@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import InitialCart from "../InitialCart";
 import { userGreetingContext } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
+import "./checkoutcart.css";
 
 type Props = {};
 
@@ -37,11 +38,12 @@ export default function CheckOutCart({}: Props) {
 
   return (
     <div className="checkout-data">
-      {userProductCart.length === 0 && <InitialCart />}
-      {userProductCart.length > 0 && (
+      {userProductCart.length === 0 ? (
+        <InitialCart />
+      ) : (
         <>
           <h2>SHOPPING BAG</h2>
-          <div>
+          <div className="cap-container">
             {Object.entries(productQuantity).map(([productId, count]) => {
               return (
                 <div key={productId}>
@@ -50,13 +52,17 @@ export default function CheckOutCart({}: Props) {
                       (item) => item.id === productId
                     )}
                     count={count}
-                    price={calcTotal}
+                    calcTotal={calcTotal}
                   />
                 </div>
               );
             })}
           </div>
-          <div>
+          <div className="sangi-container">
+            <div className="totalprice">
+              <p>Subtotal</p>
+              <p>${total}</p>
+            </div>
             <div className="continue-container">
               <button
                 className="continue-btn"
@@ -64,9 +70,8 @@ export default function CheckOutCart({}: Props) {
               >
                 Continue Shopping
               </button>
+              <button className="continue-btn">Proceed to Checkout</button>
             </div>
-            <p>Subtotal</p>
-            <p>${total}</p>
           </div>
         </>
       )}

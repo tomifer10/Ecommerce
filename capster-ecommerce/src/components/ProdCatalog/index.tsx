@@ -28,6 +28,9 @@ export default function ProdCatalog({}: Props) {
             </Link>
           );
         })}
+        <div className="loadmore-btn-container">
+          <button className="loadmore-btn"> LOAD MORE</button>
+        </div>
       </div>
     </div>
   );

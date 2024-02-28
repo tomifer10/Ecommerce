@@ -1,0 +1,19 @@
+.cap-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: calc(100vh - 12rem);
+  background-color: var(--white--primary);
+  padding-top: 3rem;
+}
+.totalprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  padding: 1rem;
+}
+.sangi-container {
+  height: 10rem;
+}

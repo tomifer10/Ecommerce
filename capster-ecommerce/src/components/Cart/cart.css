@@ -6,12 +6,13 @@
   background-color: #f9f9f9;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   height: 50vh;
-  margin-top: 1rem;
 }
 
 .check-cap {
   display: flex;
   align-items: center;
+  background-color: white;
+  margin-top: rem;
 }
 
 .check-cap-image {
@@ -70,4 +71,5 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 1rem;
 }
