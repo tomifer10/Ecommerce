@@ -24,11 +24,11 @@ Let's see what it's all about!
 Capster is an Ecommerce made with React + Typescript that evolved from the first component to the complete development of the app.
 I put emphasis on making it a modern design, which is aligned with the aesthetics of the content and at the same time intuitive, so that the user can quickly identify the parts that make up the application and can interact with them without difficulty.
 <br/>
-🔑 The app consists of a home page where you must enter your username and password to continue browsing.
-👋 Once the user and password have been entered correctly, you will be redirected to a welcome page.
-📜 Also contains the catalog with all available products.
-🧢 You can navigate within each product to see the details of that product, and if you like it you can add it to your cart.
-🛒 And finally you can see in the shopping cart all the products you have stored and the total price.
+🔑 The app consists of a home page where you must enter your username and password to continue browsing.<br/>
+👋 Once the user and password have been entered correctly, you will be redirected to a welcome page.<br/>
+📜 Also contains the catalog with all available products.<br/>
+🧢 You can navigate within each product to see the details of that product, and if you like it you can add it to your cart.<br/>
+🛒 And finally you can see in the shopping cart all the products you have stored and the total price.<br/>
 
 ## Technologies used 👨‍💻
 
