@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { dataUsers } from "../../interfaces/dataUsers";
 import { userGreetingContext } from "../../context/userContext";
-import { useAuthenticationDispatch } from "../../context/authContext"; // Importa el dispatch de autenticación
+import { useAuthenticationDispatch } from "../../context/authContext";
 
 type Props = {};
 
@@ -12,7 +12,7 @@ const Login = (_props: Props) => {
   const [JSONuser, setJSONuser] = useState<dataUsers[]>([]);
   const callNavigate = useNavigate();
   const userContext = userGreetingContext();
-  const authDispatch = useAuthenticationDispatch(); // Obtén el dispatch de autenticación
+  const authDispatch = useAuthenticationDispatch();
 
   const getUserData = async () => {
     try {
@@ -53,10 +53,8 @@ const Login = (_props: Props) => {
       userContext.setUser(userSuccessfullyFound);
       console.log("User successfully found:", userSuccessfullyFound);
 
-      // Actualiza el estado de autenticación usando el dispatch
       authDispatch({ type: "LOGIN" });
 
-      // Navega a la página de saludo
       callNavigate("/greeting");
     } else {
       alert("Wrong Username or Password. Please try again");

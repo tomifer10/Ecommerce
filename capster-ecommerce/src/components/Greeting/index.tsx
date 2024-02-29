@@ -7,9 +7,8 @@ type Props = {};
 
 export default function Greeting({}: Props) {
   const callNavigate = useNavigate();
-  const userContext = userGreetingContext(); // Obtén el contexto de usuario
+  const userContext = userGreetingContext();
 
-  // Obtén el nombre del usuario del contexto
   const userName = userContext.user ? userContext.user.name : "";
   return (
     <>

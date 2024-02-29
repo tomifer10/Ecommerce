@@ -2,7 +2,7 @@ import "./productdetails.css";
 import { useProductContext } from "../../context/prodContext";
 import { userGreetingContext } from "../../context/userContext";
 import { useParams } from "react-router-dom";
-import { SetStateAction, useState, useContext } from "react";
+import { SetStateAction, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductDetails({}) {
