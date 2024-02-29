@@ -23,13 +23,13 @@ export default function Cart({ product, count, calcTotal }: Props) {
   const removeFromCart = (itemToRemove: dataProducts | undefined) => {
     setCounter((prevState) => prevState - 1);
     if (user.cart && itemToRemove) {
-      // Utiliza filter para eliminar solo el elemento específico del carrito
-      user.cart = user.cart.filter((item) => item.id !== itemToRemove.id);
-      calcTotal();
+      const index = user.cart.indexOf(itemToRemove);
+      user.cart.splice(index, 1);
+      console.log(user.cart);
     }
+    calcTotal();
   };
   const cartRemoval = () => {
-    // Elimina todos los elementos asociados al producto del carrito
     for (let i = 0; i < counter; i++) {
       removeFromCart(product);
     }
